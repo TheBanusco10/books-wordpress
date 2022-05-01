@@ -1,0 +1,11 @@
+{
+    "name": "david/books",
+    "description": "Create books and display them easily on your website",
+    "license": "GPL3",
+    "autoload": {
+        "psr-4": {
+            "Books\\": "src/"
+        }
+    },
+    "require": {}
+}
