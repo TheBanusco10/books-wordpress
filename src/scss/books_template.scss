@@ -1,0 +1,38 @@
+$primary-color: mediumaquamarine;
+
+.shortcode-title {
+  font-family: 'Source Serif Pro', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1rem;
+
+  .book {
+    height: 230px;
+
+    cursor: pointer;
+
+    border-bottom: 4px solid transparent;
+
+    transition: all .3s;
+
+    &:hover {
+      border-bottom: 4px solid $primary-color;
+
+      transform: translateY(-10px);
+
+      box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}

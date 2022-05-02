@@ -21,9 +21,8 @@ class BooksCPT
             'rewrite' => ['slug' => 'books'],
             'menu_icon' => 'dashicons-book',
             'menu_position' => 7,
-            'has_archive'        => true,
             'hierarchical'       => false,
-            'supports'           => ['title', 'editor', 'thumbnail'],
+            'supports'           => ['title', 'editor', 'comments', 'thumbnail'],
             'map_meta_cap'       => true
         ];
 
