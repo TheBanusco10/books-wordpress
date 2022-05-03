@@ -15,6 +15,8 @@ $primary-color: mediumaquamarine;
   gap: 1rem;
 
   .book {
+    position: relative;
+
     height: 230px;
 
     cursor: pointer;
@@ -29,10 +31,48 @@ $primary-color: mediumaquamarine;
       transform: translateY(-10px);
 
       box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+      img {
+        filter: brightness(0.7);
+      }
     }
 
     img {
       height: 100%;
+
+      transition: all .3s;
+    }
+
+    .books-actions {
+      position: absolute;
+
+      width: 100%;
+
+      display: flex;
+      justify-content: end;
+
+      bottom: 0;
+      margin-bottom: .5rem;
+
+      .book-actions-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        color: white;
+
+        &:hover {
+          color: #d35a5c;
+        }
+
+        &.favourite {
+          color: #d63638;
+        }
+
+        .book-actions-icons {
+          font-size: 25px;
+        }
+      }
     }
   }
 }
