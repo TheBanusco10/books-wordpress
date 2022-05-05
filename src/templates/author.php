@@ -1,8 +1,11 @@
-<?php
-    get_header();
-?>
+<?= get_header(); ?>
 
-<h1><?= get_the_author() ?></h1>
+<div class="wp-site-blocks">
+    <h1><?= get_the_author() ?></h1>
+
+    <?= do_shortcode('[books favourite_books=true]') ?>
+</div>
+
 
 <?php
 

@@ -36,10 +36,15 @@ class Books
      * @description Creates shortcode to display Books
      * @return false|string
      */
-    function books_create_shortcode() {
+    function books_create_shortcode($args) {
+
+        $args = shortcode_atts([
+            'favourite_books' => false
+        ], $args);
+
         ob_start();
 
-        $this->templateManager->books_include_shortcode_template();
+        $this->templateManager->books_include_shortcode_template($args);
 
         return ob_get_clean();
     }

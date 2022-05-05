@@ -17,7 +17,7 @@ class Templates
         return $template;
     }
 
-    function books_include_shortcode_template() {
+    function books_include_shortcode_template($args) {
         include plugin_dir_path(__FILE__) . 'templates/books_shortcode.php';
     }
 }
