@@ -60,7 +60,7 @@ class Books
 
         wp_enqueue_script('books-actions', plugin_dir_url(__FILE__) . 'js/books-actions.js', ['jquery'], 1.0, true);
 
-        wp_localize_script('books-actions', 'admin_url', ['ajax_url' => admin_url('admin-ajax-php')]);
+        wp_localize_script('books-actions', 'admin_url', ['ajax_url' => admin_url('admin-ajax.php')]);
     }
 
 

@@ -12,15 +12,10 @@ class AJAX
     }
 
     function books_load_ajax_scripts() {
-//        add_action('wp_enqueue_scripts', [$this, 'books_localize_scripts']);
         $this->books_init_ajax_scripts();
     }
 
-    function books_localize_scripts() {
-    }
-
     function books_init_ajax_scripts() {
-//        add_action('wp_ajax_nopriv_books_add_to_favourites', [$this, 'books_add_to_favourites']);
         add_action('wp_ajax_books_add_to_favourites', [$this, 'books_add_to_favourites']);
     }
 

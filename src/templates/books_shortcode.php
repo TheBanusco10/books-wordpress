@@ -20,13 +20,13 @@ if (filter_var($args['favourite_books'], FILTER_VALIDATE_BOOLEAN)) {
     ]);
 }
 
-if ($books && $books->have_posts()): ?>
+if ($books): ?>
     <?php if ($user_id !== 0): ?>
-        <a href="<?= get_site_url(null, "/author/$user->user_login") ?>">
+        <a href="<?= get_author_posts_url($user_id) ?>">
             <span class="dashicons dashicons-admin-users"></span>
         </a>
     <?php endif; ?>
-
+    <?php if ($books->have_posts()): ?>
     <section id="books">
         <?php
         while ($books->have_posts()): $books->the_post(); ?>
@@ -49,6 +49,9 @@ if ($books && $books->have_posts()): ?>
         endwhile;
         ?>
     </section>
+    <?php else: ?>
+    <p>Please, add books to display them.</p>
+    <?php endif; ?>
 
 
 <?php

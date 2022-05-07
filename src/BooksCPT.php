@@ -29,7 +29,7 @@ class BooksCPT
         register_post_type('books', $args);
 
         $this->books_set_capabilites();
-        rewrite_flush();
+        flush_rewrite_rules();
     }
 
     private function books_set_capabilites() {
