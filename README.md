@@ -8,6 +8,10 @@ Shortcode:
 
 `[books]`
 
+Attributes:
+
+- `favourite-books` → true or false → Display only user's favourite books `[books favourite-books=true]` 
+
 ## Some usages
 
 ### Working with styles
